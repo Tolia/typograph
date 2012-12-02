@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = Typograph::VERSION
   gem.authors       = ["sterebooster"]
   gem.email         = ["stereobooster@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Gem for typographing russian texts. Ruby port of SamDark's Typograph}
+  gem.summary       = %q{Gem for typographing russian texts. Ruby port of SamDark's Typograph}
   gem.homepage      = ""
   gem.license       = "MIT"
 
@@ -18,7 +18,9 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
-  gem.add_dependency "htmlentities"
+  gem.add_dependency 'htmlentities'
+
+  gem.add_development_dependency 'xml-simple'
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'rspec'
 end
