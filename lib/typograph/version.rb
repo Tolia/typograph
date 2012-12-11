@@ -1,3 +1,3 @@
 module Typograph
-  VERSION = "0.0.1.pre.1"
+  VERSION = "0.0.1.pre.2"
 end
