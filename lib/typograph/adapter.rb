@@ -19,7 +19,7 @@ module Typograph
       # Приводим кавычки к «"»
       str.gsub!(/(„|“|&quot;)/, '"')
       # 
-      str.gsub!(/^\s+|\s+$/, '')
+      str.chomp(" \r\n\t")
       HTMLEntities.new.decode(str)
     end
   end
