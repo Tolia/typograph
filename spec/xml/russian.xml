@@ -592,7 +592,7 @@
         </test>
         <test>
             <input>Кто то где то когда то как то что то чем то стукнул. И возможно чего нибудь бы получилось если б кто либо пришел.</input>
-            <expected><![CDATA[<nobr>Кто-то</nobr> <nobr>где-то</nobr> <nobr>когда-то</nobr> <nobr>как-то</nobr> <nobr>что-то</nobr> <nobr>чем-то</nobr> стукнул. И&nbsp;возможно <nobr>чего-нибудь</nobr>&nbsp;бы получилось если&nbsp;б <nobr>кто-либо</nobr>&nbsp;пришел.]]></expected>
+            <expected><![CDATA[<nobr>Кто–то</nobr> <nobr>где–то</nobr> <nobr>когда–то</nobr> <nobr>как–то</nobr> <nobr>что–то</nobr> <nobr>чем–то</nobr> стукнул. И&nbsp;возможно <nobr>чего–нибудь</nobr>&nbsp;бы получилось если&nbsp;б <nobr>кто–либо</nobr>&nbsp;пришел.]]></expected>
         </test>
         <test>
             <input>В смешанных лесах встречаются разнообразные деревья, как то: береза, осина, кедр, сосна.</input>
@@ -600,7 +600,7 @@
         </test>
         <test>
             <input>Опять же что - то получилось, но как- то не так.</input>
-            <expected><![CDATA[Опять&nbsp;же <nobr>что-то</nobr> получилось, но&nbsp;<nobr>как-то</nobr>&nbsp;не&nbsp;так.]]></expected>
+            <expected><![CDATA[Опять&nbsp;же <nobr>что–то</nobr> получилось, но&nbsp;<nobr>как–то</nobr>&nbsp;не&nbsp;так.]]></expected>
         </test>
         <test>
             <input>Возьми ка детка молока.  А коль увижу де, что казнь ему мала, повешу тут же всех судей вокруг стола. Поди кась так.</input>
