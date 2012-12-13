@@ -592,7 +592,7 @@
         </test>
         <test>
             <input>Кто то где то когда то как то что то чем то стукнул. И возможно чего нибудь бы получилось если б кто либо пришел.</input>
-            <expected><![CDATA[<nobr>Кто–то</nobr> <nobr>где–то</nobr> <nobr>когда–то</nobr> <nobr>как–то</nobr> <nobr>что–то</nobr> <nobr>чем–то</nobr> стукнул. И&nbsp;возможно <nobr>чего–нибудь</nobr>&nbsp;бы получилось если&nbsp;б <nobr>кто–либо</nobr>&nbsp;пришел.]]></expected>
+            <expected><![CDATA[<nobr>Кто–то</nobr> <nobr>где–то</nobr> <nobr>когда–то</nobr> <nobr>как–то</nobr> <nobr>что–то</nobr> <nobr>чем–то</nobr> стукнул. И&nbsp;возможно <nobr>чего–нибудь</nobr>&nbsp;бы получилось если&nbsp;б <nobr>кто–либо</nobr> пришел.]]></expected>
         </test>
         <test>
             <input>В смешанных лесах встречаются разнообразные деревья, как то: береза, осина, кедр, сосна.</input>
@@ -600,15 +600,15 @@
         </test>
         <test>
             <input>Опять же что - то получилось, но как- то не так.</input>
-            <expected><![CDATA[Опять&nbsp;же <nobr>что–то</nobr> получилось, но&nbsp;<nobr>как–то</nobr>&nbsp;не&nbsp;так.]]></expected>
+            <expected><![CDATA[Опять&nbsp;же <nobr>что–то</nobr> получилось, но&nbsp;<nobr>как–то</nobr> не&nbsp;так.]]></expected>
         </test>
         <test>
             <input>Возьми ка детка молока.  А коль увижу де, что казнь ему мала, повешу тут же всех судей вокруг стола. Поди кась так.</input>
-            <expected><![CDATA[<nobr>Возьми–ка</nobr> детка молока. А&nbsp;коль <nobr>увижу–де</nobr>, что казнь ему мала, повешу тут&nbsp;же всех судей вокруг стола. <nobr>Поди–кась</nobr>&nbsp;так.]]></expected>
+            <expected><![CDATA[<nobr>Возьми–ка</nobr> детка молока. А&nbsp;коль <nobr>увижу–де</nobr>, что казнь ему мала, повешу тут&nbsp;же всех судей вокруг стола. <nobr>Поди–кась</nobr> так.]]></expected>
         </test>
         <test>
             <input>Кое как дошли. Кой кого встретили. Кое от кого, кое на чем, кой у кого, кое с чьим.</input>
-            <expected><![CDATA[<nobr>Кое–как</nobr> дошли. <nobr>Кой–кого</nobr> встретили. Кое от&nbsp;кого, кое на&nbsp;чем, кой у&nbsp;кого, кое&nbsp;с&nbsp;чьим.]]></expected>
+            <expected><![CDATA[<nobr>Кое–как</nobr> дошли. <nobr>Кой–кого</nobr> встретили. Кое от&nbsp;кого, кое на&nbsp;чем, кой у&nbsp;кого, кое с&nbsp;чьим.]]></expected>
         </test>
         <test>
             <input>Секретарь, хотя и чувствовал свое слабое недовольство, все таки радовался наличию таких старушек в активе района. Но хоть и велик был соблазн, я таки успел себя побороть.</input>
@@ -680,7 +680,7 @@
         </test>
         <test>
             <input>Жёлто-оранжевый цвет. Ростов-на-Дону красивый город.</input>
-            <expected><![CDATA[<nobr>Жёлто-оранжевый</nobr> цвет. <nobr>Ростов-на-Дону</nobr> красивый&nbsp;город.]]></expected>
+            <expected><![CDATA[<nobr>Жёлто-оранжевый</nobr> цвет. <nobr>Ростов-на-Дону</nobr> красивый город.]]></expected>
         </test>
         <test>
             <input>ООО "Фирма "Терминал", НИИ "ОблСнабВротКомпот"</input>
@@ -716,7 +716,7 @@
         </test>
         <test>
             <input>Выставка пройдёт в апреле-мае этого года.</input>
-            <expected><![CDATA[Выставка пройдёт в&nbsp;апреле—мае этого&nbsp;года.]]></expected>
+            <expected><![CDATA[Выставка пройдёт в&nbsp;апреле—мае этого года.]]></expected>
         </test>
         <test>
             <input>IV в до н.э, в V-VIвв до нэ., третий в. н.э.</input>
@@ -737,7 +737,7 @@
         </test>
         <test>
             <input>На лесопилку завезли 32 м3 леса, из которых 4м3 пустили под распил на 25мм доски, длиной по 6м.</input>
-            <expected><![CDATA[На&nbsp;лесопилку завезли 32&nbsp;м<sup>3</sup> леса, из&nbsp;которых 4&nbsp;м<sup>3</sup> пустили под&nbsp;распил на&nbsp;25&nbsp;мм доски, длиной&nbsp;по&nbsp;6&nbsp;м.]]></expected>
+            <expected><![CDATA[На&nbsp;лесопилку завезли 32&nbsp;м<sup>3</sup> леса, из&nbsp;которых 4&nbsp;м<sup>3</sup> пустили под&nbsp;распил на&nbsp;25&nbsp;мм доски, длиной по&nbsp;6&nbsp;м.]]></expected>
         </test>
         <test>
             <input>Сдается с 20 октября</input>
