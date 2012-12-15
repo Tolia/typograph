@@ -44,6 +44,9 @@ module Typograph
 
       # выдераем дублирующиеся nowrap
       str.gsub!(/(\<(\/?nobr)\>)+/i, '\1')
+      str.gsub! /<nobr>(.*?)<\/nobr>/ do |match|
+        match.to_s.gsub('&nbsp;', ' ')
+      end
     
       str
     end
