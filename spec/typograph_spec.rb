@@ -399,4 +399,10 @@ describe '.process' do
     Typograph.process(text, OPT).should eq text_processed
   end
 
+  it 'Не трогаем ссылки в маркдауне' do
+    text = "Глава из книги Бориса Гройса «Поэтика политики»](http://theoryandpractice.ru/posts/6762-wikileaks-vosstanie-klerkov-glava-iz-knigi-borisa-groysa-poetika-politiki)"
+    text_processed = "Глава из&nbsp;книги Бориса Гройса «Поэтика политики»](http://theoryandpractice.ru/posts/6762-wikileaks-vosstanie-klerkov-glava-iz-knigi-borisa-groysa-poetika-politiki)"
+    Typograph.process(text, OPT).should eq text_processed
+  end
+
 end
