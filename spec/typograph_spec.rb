@@ -297,7 +297,7 @@ describe '.process' do
 
   it 'Расстановка тире и объединение в неразрывные периоды месяцев' do
     text = 'Выставка пройдёт в апреле-мае этого года.'
-    text_processed = 'Выставка пройдёт в&nbsp;<nobr>апреле-мае</nobr> этого года.'
+    text_processed = 'Выставка пройдет в&nbsp;<nobr>апреле-мае</nobr> этого года.'
     Typograph.process(text, OPT).should eq text_processed
   end
 
@@ -392,4 +392,11 @@ describe '.process' do
   #   text_processed = '<p>Все что вы&nbsp;хотели узнать о&nbsp;<acronym title="HyperText Markup Language" lang="en">HTML</acronym>.</p>'
   #   Typograph.process(text, OPT).should eq text_processed
   # end
+
+  it 'Меняем ё на е и Ё на Е' do
+    text = 'Ёж обыкновенный, или европейский ёж.'
+    text_processed = 'Еж обыкновенный, или европейский еж.'
+    Typograph.process(text, OPT).should eq text_processed
+  end
+
 end
