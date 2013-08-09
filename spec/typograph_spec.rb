@@ -405,4 +405,9 @@ describe '.process' do
     Typograph.process(text, OPT).should eq text_processed
   end
 
+  it 'Не трогам отсупы у тире, если с тире начинается строка' do
+    text = /— Как выглядел процесс поступления?\n\n— Процесс поступления был стандартным — мотивационное письмо./.to_s
+    text_processed = /— Как&nbsp;выглядел процесс поступления?\n\n— Процесс поступления был стандартным&nbsp;— мотивационное письмо./.to_s
+    Typograph.process(text, OPT).should eq text_processed
+  end
 end
