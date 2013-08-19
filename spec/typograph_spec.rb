@@ -72,7 +72,7 @@ describe '.process' do
 
   it 'Удаление пробелов перед знаками препинания' do
     text = 'Некоторые виды деревьев : ель ,сосна , берёза, дуб ; растут в наших лесах .'
-    text_processed = 'Некоторые виды деревьев: ель, сосна, берёза, дуб; растут в&nbsp;наших лесах.'
+    text_processed = 'Некоторые виды деревьев: ель, сосна, береза, дуб; растут в&nbsp;наших лесах.'
     Typograph.process(text, OPT).should eq text_processed
   end
 
@@ -108,7 +108,7 @@ describe '.process' do
 
   it 'Привязка союзов, предлогов' do
     text = 'Я бы в лётчики б пошёл, пусть меня научат.'
-    text_processed = 'Я&nbsp;бы в&nbsp;лётчики&nbsp;б пошёл, пусть меня научат.'
+    text_processed = 'Я&nbsp;бы в&nbsp;летчики&nbsp;б пошел, пусть меня научат.'
     Typograph.process(text, OPT).should eq text_processed
   end
 
@@ -153,7 +153,7 @@ describe '.process' do
 
   it 'Расстановка знака минус между числами' do
     text = '123-32'
-    text_processed = '123–32'
+    text_processed = '123-32'
     Typograph.process(text, OPT).should eq text_processed
   end
 
@@ -418,4 +418,11 @@ describe '.process' do
 — Сейчас я&nbsp;учусь по&nbsp;обмену в&nbsp;Болонском университете на&nbsp;факультете политических наук. В&nbsp;Москве&nbsp;— в&nbsp;Высшей школе экономики"
     Typograph.process(text, OPT).should eq text_processed
   end
+
+  it "Лишнее тере с 'как' 'то'" do
+    text = "Я постараюсь ответить на твой вопрос так просто, как только смогу. Вот мой ответ:"
+    text_processed = "Я&nbsp;постараюсь ответить на&nbsp;твой вопрос так просто, как&nbsp;только смогу. Вот мой ответ:"
+    Typograph.process(text, OPT).should eq text_processed
+  end
+
 end
