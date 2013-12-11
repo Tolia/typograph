@@ -1,23 +1,26 @@
 # -*- encoding: utf-8 -*-
-lib = File.expand_path('../lib/', __FILE__)
-$:.unshift lib unless $:.include?(lib)
-
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'typographer/version'
 
-Gem::Specification.new do |s|
-  s.name             = TypographerHelper::GEM_NAME
-  s.version          = TypographerHelper::VERSION
-  s.summary          = "#{TypographerHelper::GEM_NAME}-#{TypographerHelper::VERSION}"
-  s.description      = "This gem makes text more readable by applying some typographic rules to string.\nThis is a fork of original typography gem."
-  s.files            = Dir.glob("{lib,spec}/**/*") + [ "Gemfile", "init.rb"]
+Gem::Specification.new do |gem|
+  gem.name          = TypographerHelper::GEM_NAME
+  gem.version       = TypographerHelper::VERSION
+  gem.authors       = []
+  gem.email         = []
+  gem.description   = %q{Gem for typographing russian texts.}
+  gem.summary       = %q{Gem for typographing russian texts.}
+  gem.homepage      = ""
+  gem.license       = "MIT"
 
-  s.test_files       = Dir.glob("spec/**/*")
-  s.require_path     = "lib"
-  s.extra_rdoc_files = []
-  s.rdoc_options     = []
+  gem.files         = `git ls-files`.split($/)
+  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+  gem.test_files    = gem.files.grep(%r{^(spec)/})
+  gem.require_paths = ["lib"]
 
-  s.add_dependency "actionpack", '>= 3.1.0'
-  s.add_development_dependency "rspec", ">= 2.0.0"
+  gem.add_dependency 'htmlentities'
 
-  s.add_development_dependency "autotest"
+  gem.add_development_dependency 'xml-simple'
+  gem.add_development_dependency 'rake'
+  gem.add_development_dependency 'rspec'
 end
