@@ -92,7 +92,6 @@ describe TypographerHelper, 'with typographer' do
     ty('Before&mdash;after').should == 'Before&mdash;after'
   end
 
-
   it "should insert &nbsp; after small words" do
     ty('an apple').should == 'an&nbsp;apple'
   end
