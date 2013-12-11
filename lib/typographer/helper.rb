@@ -4,7 +4,7 @@ require 'action_view'
 module ActionView::Helpers::TextHelper
   
   def ty(text)
-    TypographerHelper.parse text.to_s
+    Typograph.parse text.to_s
   end
 
 end

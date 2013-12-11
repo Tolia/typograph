@@ -1,5 +1,5 @@
 # encoding: utf-8
-module TypographerHelper
+module Typograph
   GEM_NAME = "typograph"
   VERSION = "0.1"
 end
