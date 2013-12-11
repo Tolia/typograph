@@ -4,8 +4,8 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'typographer/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = TypographerHelper::GEM_NAME
-  gem.version       = TypographerHelper::VERSION
+  gem.name          = Typograph::GEM_NAME
+  gem.version       = Typograph::VERSION
   gem.authors       = []
   gem.email         = []
   gem.description   = %q{Gem for typographing russian texts.}
