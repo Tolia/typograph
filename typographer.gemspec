@@ -6,10 +6,10 @@ require 'typographer/version'
 Gem::Specification.new do |gem|
   gem.name          = Typograph::GEM_NAME
   gem.version       = Typograph::VERSION
-  gem.authors       = []
-  gem.email         = []
-  gem.description   = %q{Gem for typographing russian texts.}
-  gem.summary       = %q{Gem for typographing russian texts.}
+  gem.authors       = ['Tolia']
+  gem.email         = ['toliademidov@gmail.com']
+  gem.description   = %q{Gem for typographing russian and english texts.}
+  gem.summary       = %q{Gem for typographing russian and english texts.}
   gem.homepage      = ""
   gem.license       = "MIT"
 
@@ -20,7 +20,6 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency 'htmlentities'
 
-  gem.add_development_dependency 'xml-simple'
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'rspec'
 end
