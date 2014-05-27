@@ -1,46 +1,52 @@
 # Typograph
 
-Gem for typographing russian texts. Ruby port of [SamDark's Typograph](https://github.com/samdark/Typograph).
+Gem for typographing russian and english texts.
 
-## TODO
- - implement best opensource russian typograph as ruby gem
-  - Port [Typograph](https://github.com/samdark/Typograph) (one of the best opensource russain typographs)
- - add to [multi_typograf](https://github.com/stereobooster/multi_typograf)
- - implement english typograph
- - implement typograph for other languages. Implement settings throught YAML
-  - [web typography 6](http://habrahabr.ru/post/25958/)
-  - [foreign typography](http://habrahabr.ru/post/117142/)
-  - [deutch](http://habrahabr.ru/post/12742/)
-  - http://de.wikipedia.org/wiki/Geviertstrich
-  - http://de.wikipedia.org/wiki/Typografie_für_HTML
+##### Привязка союзов, предлогов
+```
+> Typograph.process 'Я бы в лётчики б пошёл, пусть меня научат.'
+  'Я&nbsp;бы в&nbsp;летчики&nbsp;б пошел, пусть меня научат.'
+```
 
-## Alternatives
+##### Расстановка кавычек
+```
+> Typograph.process '"Кавычки "второго уровня"" and "Quotes "second level""'
+  '«Кавычки “второго уровня”» and “Quotes ‘second level’”'
+```
 
-### ruby gems, wrappers for online services - russian
- - [art_typograf](https://github.com/stereobooster/art_typograf) wrapper for http://www.artlebedev.ru/tools/typograf/
- - [typograf](https://github.com/stereobooster/typograf) wrapper for http://www.typograf.ru/
+##### Расстановка запятых перед а, но
+```
+> Typograph.process 'Мало написать а запятые кто за тебя расставит.'
+ '"Мало написать, а&nbsp;запятые кто за&nbsp;тебя расставит.'
+```
 
-### ruby gems - russian
- - [typographer](https://github.com/brain-geek/typographer)
- - [typography](https://github.com/antonversal/typography)
- - [typographica](https://github.com/akolosov/typographica)
+##### Отсутствие запятых у "а"" и "но" после тире
+```
+> Typograph.process 'Текст до тире – а теперь после'
+  'Текст до&nbsp;тире&nbsp;— а&nbsp;теперь после'
+```
 
-### ruby - english
- - [SmartyPants](http://rubydoc.info/gems/redcarpet/2.1.1/Redcarpet/Render/SmartyPants)
- - [rubypants](https://github.com/jmcnevin/rubypants)
+##### Расстановка правильного апострофа в английских текстах
+```
+> Typograph.process "don't"
+  'don’t'
+```
 
-### other
- - [habari-typography](https://github.com/ahutchings/habari-typography)
- - [typography-helper](https://github.com/hunter/typography-helper) english
 
-## Usage
-
-TODO: Write usage instructions here
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+- Замена ё на е
+- Удаление лишних пробелов
+- Расстановка дефиса в предлогах из-за, из-под
+- Расстановка дефиса перед -таки
+- Расстановка дефиса после кое-, кой-
+- Удаление пробела перед символом процент
+- Удаление пробелов внутри скобок
+- Выделение прямой речи
+- Замена (R) на символ зарегистрированной торговой марки
+- Замена (c) на символ копирайт
+- Замена (tm) на символ торговой марки
+- Замена дробей 1/2, 1/4, 3/4 на соответствующие символы
+- Расстановка пробелов перед сокращениями см., им.
+- Расстановка пробелов перед сокращениями гл., стр., рис., илл.
+- Объединение сокращений и др.
+- Расстановка пробелов в сокращениях г., ул., пер., д.
+- Расстановка пробелов перед сокращениями dpi, lpi
