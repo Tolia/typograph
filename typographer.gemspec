@@ -1,10 +1,10 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'typographer/version'
+require 'typograph/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = Typograph::GEM_NAME
+  gem.name          = 'typograph'
   gem.version       = Typograph::VERSION
   gem.authors       = ['Tolia']
   gem.email         = ['toliademidov@gmail.com']

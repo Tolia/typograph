@@ -50,3 +50,16 @@ Typograph.process "don't"
 - Объединение сокращений и др.
 - Расстановка пробелов в сокращениях г., ул., пер., д.
 - Расстановка пробелов перед сокращениями dpi, lpi
+
+### rspec
+
+``` ruby
+Finished in 0.07754 seconds
+47 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/typograph_spec.rb:73 # .process Удаление пробелов перед знаками препинания
+rspec ./spec/typograph_spec.rb:79 # .process Расстановка пробелов после знака препинания
+rspec ./spec/typograph_spec.rb:103 # .process Выделение прямой речи
+```
