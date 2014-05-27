@@ -3,33 +3,33 @@
 Gem for typographing russian and english texts.
 
 ##### Привязка союзов, предлогов
-```
-> Typograph.process 'Я бы в лётчики б пошёл, пусть меня научат.'
-  'Я&nbsp;бы в&nbsp;летчики&nbsp;б пошел, пусть меня научат.'
+``` ruby
+Typograph.process 'Я бы в лётчики б пошёл, пусть меня научат.'
+> 'Я&nbsp;бы в&nbsp;летчики&nbsp;б пошел, пусть меня научат.'
 ```
 
 ##### Расстановка кавычек
-```
-> Typograph.process '"Кавычки "второго уровня"" and "Quotes "second level""'
-  '«Кавычки “второго уровня”» and “Quotes ‘second level’”'
+``` ruby
+Typograph.process '"Кавычки "второго уровня"" and "Quotes "second level""'
+> '«Кавычки “второго уровня”» and “Quotes ‘second level’”'
 ```
 
 ##### Расстановка запятых перед а, но
-```
-> Typograph.process 'Мало написать а запятые кто за тебя расставит.'
- '"Мало написать, а&nbsp;запятые кто за&nbsp;тебя расставит.'
+``` ruby
+Typograph.process 'Мало написать а запятые кто за тебя расставит.'
+> '"Мало написать, а&nbsp;запятые кто за&nbsp;тебя расставит.'
 ```
 
 ##### Отсутствие запятых у "а"" и "но" после тире
-```
-> Typograph.process 'Текст до тире – а теперь после'
-  'Текст до&nbsp;тире&nbsp;— а&nbsp;теперь после'
+``` ruby
+Typograph.process 'Текст до тире – а теперь после'
+> 'Текст до&nbsp;тире&nbsp;— а&nbsp;теперь после'
 ```
 
 ##### Расстановка правильного апострофа в английских текстах
-```
-> Typograph.process "don't"
-  'don’t'
+``` ruby
+Typograph.process "don't"
+> 'don’t'
 ```
 
 
