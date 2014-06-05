@@ -45,4 +45,17 @@ describe 'errors' do
     end
   end
 
+
+
+  describe 'options' do
+    it 'only russian quotes' do
+      text            = 'Тумбочка "staple x"'
+      text_processed  = "Тумбочка «staple x»"
+      Typograph.process(text, only: [:ru]).should eq text_processed
+    end
+  end
+
+
+
+
 end

@@ -13,6 +13,12 @@ module Typograph
       ['<code[^>]*>','</code>']
     ]
 
+    def initialize(options={})
+      @adapter         = Adapter.new options
+      @russian_grammar = Processors::RussianGrammar.new options
+      @quotes          = Processors::Quotes.new options
+    end
+
     def safe_blocks
       @pattern ||= begin
         pattern = SAFE_BLOCKS.map do |val|
@@ -46,10 +52,5 @@ module Typograph
       str
     end
 
-    def initialize(options = {})
-      @adapter         = Adapter.new options
-      @russian_grammar = Processors::RussianGrammar.new options
-      @quotes          = Processors::Quotes.new options
-    end
   end
 end

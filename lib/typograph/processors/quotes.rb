@@ -18,30 +18,40 @@ module Typograph
       RU = 'А-я'
       EN = 'A-z'
 
-      def initialize(options={})
+      def initialize(options)
+        @options = options
       end
 
       def process(str)
-        str = replace_russian_quotes str
-        str = replace_english_quotes str
+        if @options.nil? || @options[:only].nil?
+          str = replace_russian_quotes str
+          str = replace_english_quotes str
+        else
+          if @options[:only].include? :ru
+            str = replace_russian_quotes str, RU+EN
+          elsif @options[:only].include? :en
+            str = replace_english_quotes str, RU+EN
+          end
+        end
+        str
       end
 
       private
 
-      def replace_russian_quotes(str)
+      def replace_russian_quotes(str,lang=RU)
         left1  = SPECIAL[:laquo]
         right1 = SPECIAL[:raquo]
         left2  = SPECIAL[:ldquo]
         right2 = SPECIAL[:rdquo]
-        str = replace_quotes str, left1, right1, left2, right2, RU
+        str = replace_quotes str, left1, right1, left2, right2, lang
       end
 
-      def replace_english_quotes(str)
+      def replace_english_quotes(str,lang=EN)
         left1  = SPECIAL[:ldquo]
         right1 = SPECIAL[:rdquo]
         left2  = SPECIAL[:lsquo]
         right2 = SPECIAL[:rsquo]
-        str = replace_quotes str, left1, right1, left2, right2, EN
+        str = replace_quotes str, left1, right1, left2, right2, lang
       end
 
       def replace_quotes(str,left1,right1,left2,right2,letters)
