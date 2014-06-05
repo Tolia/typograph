@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ['toliademidov@gmail.com']
   gem.description   = %q{Gem for typographing russian and english texts.}
   gem.summary       = %q{Gem for typographing russian and english texts.}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/Tolia/typograph"
   gem.license       = "MIT"
 
   gem.files         = `git ls-files`.split($/)
