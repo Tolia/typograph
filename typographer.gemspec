@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'typograph/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = 'typograph'
+  gem.name          = 'ruby_typograph'
   gem.version       = Typograph::VERSION
   gem.authors       = ['Tolia']
   gem.email         = ['toliademidov@gmail.com']

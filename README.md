@@ -1,3 +1,22 @@
+Installation
+----
+
+First start by adding this gem to your Gemfile:
+
+``` ruby
+gem 'ruby_typograph'
+```
+or
+```
+gem 'typograph', github: 'Tolia/typograph'
+```
+And then execute
+```
+$ bundle
+```
+
+
+
 # Typograph
 
 Gem for typographing russian and english texts.
