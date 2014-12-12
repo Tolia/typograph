@@ -7,7 +7,7 @@ First start by adding this gem to your Gemfile:
 gem 'ruby_typograph'
 ```
 or
-```
+``` ruby
 gem 'typograph', github: 'Tolia/typograph'
 ```
 And then execute
