@@ -8,7 +8,7 @@ gem 'ruby_typograph'
 ```
 or
 ``` ruby
-gem 'typograph', github: 'Tolia/typograph'
+gem 'ruby_typograph', github: 'Tolia/typograph', require: "typograph"
 ```
 And then execute
 ```
